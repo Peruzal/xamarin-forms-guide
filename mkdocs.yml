@@ -1,0 +1,33 @@
+site_name: Xamarin Forms Guide
+theme:
+  name: 'material'
+  palette:
+    primary: 'orange'
+    accent: 'light blue'
+
+copyright: 'Copyright &copy; 2018 - Peruzal'
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/peruzal'
+    - type: 'twitter'
+      link: 'https://twitter.com/peruzal'
+        
+pages:
+  - Home: index.md
+  - Introduction to Xamarin Forms: introduction.md
+  - Xamarin Forms Views: views.md
+  - Map View: maps.md
+  - Layout: layouts.md
+  - Navigation: navigation.md
+  - Customizng ListView: customizing-listview.md
+  - Styles and Resources: ui-styles.md
+  - Networking: networking.md
+  - Persistance and SQLite: persistence.md
+  - Data Binding: data-binding.md
+  - Model View-View Model(MVVM): mvvm.md
+  - Dependency Injection: dependency-injection.md
+  - Extending Controls with Behaviours: behaviours.md
+  - Xamarin.Essentials Cross Platform API: xamarin-essentials.md
