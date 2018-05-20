@@ -108,3 +108,39 @@ void UsernameChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
     throw new NotImplementedException();
 }
 ```
+
+## Complex Properties
+
+Most of the properties set on the views are complex objects, e.g the `Margin` is of type `Thickness`. There are two ways to set the value. 
+
+**Value Converter**
+Using a value converter, we can easily set a complex property. E.g, to set the padding to 20 for the content page, we can do the following :
+
+```xml
+
+```
+
+## Attached Properties
+
+We can also have properties not defined on that control be made available by attaching them. Properties can be attached when the control is embedded inside the outer control that have the property available. E.g, the `Grid` layout, defines `Grid.Row` and `Grid.Column`. We can have these controls available to child controls of the grid e.g
+
+![Label Grid](../images/label-grid.png)
+
+```xml
+<Grid>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="*" />
+    <RowDefinition Height="*" />
+  </Grid.RowDefinitions>
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="*" />
+  </Grid.ColumnDefinitions>
+  <Label Text="Top Left" Grid.Row="0" Grid.Column="0" />
+  <Label Text="Top Right" Grid.Row="0" Grid.Column="1" />
+  <Label Text="Bottom Left" Grid.Row="1" Grid.Column="0" />
+  <Label Text="Bottom Right" Grid.Row="1" Grid.Column="1" />
+</Grid>
+```
+
+The `Label` control does not have a property of type `Grid.Row`. Since the `Label` is a child of the `Grid`, we can attach the property to the `Label`.
