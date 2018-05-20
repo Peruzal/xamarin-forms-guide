@@ -2,8 +2,14 @@ site_name: Xamarin Forms Guide
 theme:
   name: 'material'
   palette:
-    primary: 'orange'
-    accent: 'light blue'
+    primary: 'indigo'
+    accent: 'indigo'
+markdown_extensions:
+  - codehilite
+  - admonition  
+  - meta
+
+
 
 copyright: 'Copyright &copy; 2018 - Peruzal'
 
@@ -18,10 +24,42 @@ extra:
 pages:
   - Home: index.md
   - Introduction to Xamarin Forms: introduction.md
-  - Xamarin Forms Views: views.md
-  - Map View: maps.md
-  - Layout: layouts.md
-  - Navigation: navigation.md
+  - Xamarin Forms Views: 
+      - Label: views/label.md
+      - Entry: views/entry.md
+      - Button: views/buttons.md
+      - Editor: views/editor.md
+      - Image: views/image.md
+      - Switch: views/switch.md
+      - Stepper: views/stepper.md
+      - Picker: views/picker.md
+      - Date Picker: views/date-picker.md
+      - Time Picker: views/time-picker.md
+      - Slider: views/slider.md
+      - Activity Indicator: views/activity-indicator.md
+      - ProgressBar: views/progress-bar.md
+      - Search Bar: views/search-bar.md
+      - List View: views/list-view.md
+      - Map: views/map.md
+      - Carousel View: views/carousel-view.md
+      - Web View: views/web-view.md
+  - Layouts:
+      - Layout Options: layouts/layout-options.md
+      - Stack Layout: layouts/stack-layout.md
+      - Grid Layout: layouts/grid-layout.md
+      - Absolute Layout: layouts/absolute-layout.md
+      - Relative Layout: layouts/relative-layout.md
+      - Flex Layout: layouts/flex-layout.md
+      - Scroll View: layouts/scroll-view.md
+  - Navigation: 
+    - Hierachical Navigation: navigation/hierachical-navigation.md
+    - Tabbed Navigation: navigation/tabbed-navigation.md
+    - Master Detail Navigation: navigation/master-detail-navigation.md
+    - Swipe Navigation: navigation/carousel.md
+    - Displaying Popups:
+      - Normal Popups: navigation/pop-ups/pop-ups.md
+      - Modal Popups: navigation/pop-ups/modal-pop-ups.md
+  
   - Customizng ListView: customizing-listview.md
   - Styles and Resources: ui-styles.md
   - Networking: networking.md
