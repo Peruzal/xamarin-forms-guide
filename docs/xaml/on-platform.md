@@ -1,6 +1,4 @@
-## XAML Syntax
-
-## On Platform
+# Platform Specific
 
 When you want to render your UI differently on each platform you can use the `OnPlatform` XAML extension to run code for Android, iOS and UWP. An example is, on iOS, the content shows up right from the top and you might want to push it downloads 20points, but on Android and UWP content is displayed after the status bar or tool.
 
@@ -16,10 +14,10 @@ Lets apply a 20 point margin for all platforms :
 
 `Margin` is of type `Thickness`. The value are as follows :
 
-    -  **First zero** -  Left margin
-    -  **20** - Top margin
-    -  **Third zero** - Right margin
-    -  **Last zero** - Bottom margin
+* **First zero** -  Left margin
+* **20** - Top margin
+* **Third zero** - Right margin
+* **Last zero** - Bottom margin
 
 But we ideally want is to only apply the top margin only on iOS. To accomplish that we would use the `OnPlatform` property as follows :
 

@@ -24,6 +24,9 @@ extra:
 pages:
   - Home: index.md
   - Introduction to Xamarin Forms: introduction.md
+  - XAML:
+    - Introduction to XAML: xaml/introduction.md
+    - Platform Specifics: xaml/on-platform.md
   - Xamarin Forms Views: 
       - Label: views/label.md
       - Entry: views/entry.md
