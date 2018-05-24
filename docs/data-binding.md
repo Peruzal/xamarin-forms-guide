@@ -1,5 +1,7 @@
 # Databinding 
 
+![Data Binding](images/data-binding/data-binding.png)
+
 Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other.
 
 ## Setting up Binding
@@ -44,3 +46,19 @@ In this example we will set the `slider` as the source and we use the `BindingCo
     </StackLayout>
 </ContentPage>
 ```
+
+![View to View Binding](images/data-binding/view-binding.png)
+
+## Binding Modes
+
+We can change the `Mode` of the data binding using one of these options :
+
+* **Default**
+* **OneWay** — values are transferred from the source to the target
+* **OneWayToSource** — values are transferred from the target to the source
+* **TwoWay** — values are transferred both ways between source and target
+
+## Binding ListView
+
+We can use the power of data binding to bind to the `ItemSource` of the ListView. Here is a simple `ListView` bound to a collection of months.
+

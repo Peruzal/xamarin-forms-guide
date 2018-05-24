@@ -27,6 +27,7 @@ pages:
   - XAML:
     - Introduction to XAML: xaml/introduction.md
     - Platform Specifics: xaml/on-platform.md
+    - XAML Mark Extension: xaml/xaml-markup-extensions.md
   - Xamarin Forms Views: 
       - Label: views/label.md
       - Entry: views/entry.md
