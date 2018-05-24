@@ -96,9 +96,9 @@ We define the namespace for `System` using the `xmlns:sys="clr-namespace:System;
 
 ## StaticResource Markup Extension
 
-The `x:StaticResource` is XAML markup extension is used to retrieve objects defined in the `ResourceDictionary`.
+The `StaticResource` is XAML markup extension is used to retrieve objects defined in the `ResourceDictionary`.
 
-We can use the `ResourceDictionary` to keep arbitrary objects referenced by a key. In the following example, we define a color resource and double resource. We use the keys when defining the resources. We can then later on use the `x:StaticResource` to retrieve the object by the key.
+We can use the `ResourceDictionary` to keep arbitrary objects referenced by a key. In the following example, we define a color resource and double resource. We use the keys when defining the resources. We can then later on use the `StaticResource` to retrieve the object by the key.
 
 ```xaml
     <ContentPage.Resources>
@@ -165,3 +165,33 @@ MainPage = new NavigationPage(new MainTabsPage())
 ```
 
 Since we know the resource object is type color, we were bold as cast it to the `Color` class.
+
+
+## `DynamicResource` XAML Markup Extension
+
+The `DynamicResource` extension is similar to the `StaticResource` extension with one difference, it maintains a reference to the object. If the resource changes, then the updates are reflected.
+
+If we have the following in the resource dictionary :
+
+```xaml
+<ResourceDictionary>
+    <x:String x:Key="CurrentDate">Will show a date if accessed dynamically</x:String>
+</ResourceDictionary>
+```
+
+and then use the `StatiResource` and `DynamicResource` to access the same key, you will notice that the one accessed using the `DynamicResource` will update since we have a timer running every second :
+
+```xaml
+<Label Text="{StaticResource CurrentDate}" />
+<Label Text="{DynamicResource CurrentDate}" />
+```
+
+and in code we update the resource :
+
+```csharp
+Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+{
+    Resources["CurrentDate"] = DateTime.Now.ToString("hh:mm:ss");
+    return true;
+});
+```
