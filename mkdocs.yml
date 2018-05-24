@@ -64,7 +64,7 @@ pages:
       - Normal Popups: navigation/pop-ups/pop-ups.md
       - Modal Popups: navigation/pop-ups/modal-pop-ups.md
   
-  - Customizng ListView: customizing-listview.md
+  - Customizing ListView: customizing-listview.md
   - Styles and Resources: ui-styles.md
   - Networking: networking.md
   - Persistance and SQLite: persistence.md

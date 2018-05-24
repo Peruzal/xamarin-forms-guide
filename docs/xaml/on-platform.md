@@ -36,6 +36,28 @@ Since `Margin` is a complex structure, we open a tag for it in XAMl beginning wi
 
 We then define the values for each platform, in this case we only wanted to apply for iOS, the other platforms would be on default 0.
 
+We can also use a shortened syntax to apply the margin, e.g. to apply a margin of 20 on iOS we can do the following :
+
+```xml
+<StackLayout>
+    <StackLayout.Margin>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20" />
+    </StackLayout.Margin>
+<Label Text="This will be 20 points below the status bar on iOS" />
+</StackLayout>
+```
+
+We can use the same syntax to apply for Android and iOS both as follows :
+
+```xml
+<StackLayout>
+    <StackLayout.Margin>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20" Android="20" />
+    </StackLayout.Margin>
+<Label Text="This will be 20 points below the status bar on iOS" />
+</StackLayout>
+```
+
 ### Apply Different Margins for each Platform
 
 If we wanted to apply different margins for Android and iOS, we could have done the following :
