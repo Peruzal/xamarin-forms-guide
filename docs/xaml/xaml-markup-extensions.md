@@ -195,3 +195,5 @@ Device.StartTimer(TimeSpan.FromSeconds(1), () =>
     return true;
 });
 ```
+
+<video style="width:80%" controls src="../../video/dynamic-resource.mov"></video>
