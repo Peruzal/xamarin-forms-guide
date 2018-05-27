@@ -17,3 +17,15 @@ Data in the list view is presented using cells. Each cell corresponds to a row o
 * **TextCell** - Displays text with an optional detail text.
 * **ImageCell** - Displays an image with text
 * **Custom Cell** - We can create custom cells when we need to customize the contents of each cell.
+
+## Functionality
+
+The list view supports the following actions :
+
+* Context actions
+* Pull to refresh
+* Selection
+
+## Data Source
+
+The list data is provided through the `ItemsSource` property. This can be any enumerable. If the items are objects, by default the list view uses the `ToString()` method when displaying the row. You can see data binding to choose which fields to display form the object.
