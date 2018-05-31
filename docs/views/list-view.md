@@ -155,32 +155,80 @@ public class Movie
 }
 ```
 
+*ApiResult.cs*
+```csharp
+public class ApiResult
+{
+    [JsonProperty("results")]
+    public IEnumerable<Movie> Movies { get; set; }
+}
+```
+
+*Image.cs*
+```csharp
+public class Image
+{
+    [JsonProperty("name")]
+    public string Name { get; set; }
+
+    [JsonProperty("url")]
+    public string Url { get; set; }
+}
+```
+
+And this is the link to the [full json](../files/movies.json)  with the movie data.
+
 And a model to fetch the data, and within the model we have an `ObservableCollection` of a Movie :
 
 ```csharp
-public class MoviesViewModel : BaseViewModel {
-    ObservableCollection<Movie> _movies;
-    public ObservableCollection<Movie> Movies
-    {
-        get
+    public class MoviesViewModel : BaseViewModel {
+        ObservableCollection<Movie> _movies;
+        public ObservableCollection<Movie> Movies
         {
-            if (_movies == null)
+            get
             {
-                _movies = new ObservableCollection<Movie>();
+                if (_movies == null)
+                {
+                    _movies = new ObservableCollection<Movie>();
+                }
+                return _movies;    
             }
-            return _movies;    
-        }
-        set
-        {
-            if (value != _movies)
+            set
             {
-                _movies = value;
-                OnPropertyChanged();
+                if (value != _movies)
+                {
+                    _movies = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public MoviesViewModel()
+        {
+            Task.Run(async () =>
+            {
+                var movies = await GetMovies();
+                movies.ForEach(Movies.Add);
+            });
+        }
+
+        private async  Task<IEnumerable<Movie>> GetMovies(){
+            var client = new HttpClient();
+            try
+            {
+                IsBusy = true;
+                var data = await client.GetStringAsync("replace with url to json file");
+                IsBusy = false;
+                return JsonConvert.DeserializeObject<ApiResult>(data).Movies;
+            }
+            catch (Exception ex)
+            {
+                IsBusy = false;
+                Debug.WriteLine(ex.Message);
+                return null;
             }
         }
     }
-    //The code to fetch the movie have been removed.
-}
 ```
 
 Then in the XAML, we bind the rows to the movie collection
