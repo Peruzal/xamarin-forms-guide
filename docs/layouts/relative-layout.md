@@ -217,3 +217,65 @@ Here is an example of the Relative Layout with all the Box View on the edges.
                             Factor=1}"/>             
 </RelativeLayout>
 ```
+
+### Relative to another view
+
+![Relative to View](../images/layouts/realtive-to-view.png)
+
+We can setup our views so that they are relative to their sibling views. In the example below, we have the `BoxView` in the middle relative to the parent and then the two other `BoxView`'s relative to the center box view. 
+
+```xaml
+<RelativeLayout>
+    <BoxView 
+        x:Name="boxView"
+        Color="Green" 
+        WidthRequest="50" 
+        HeightRequest="50" 
+        RelativeLayout.XConstraint=
+            "{ConstraintExpression 
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=0.5,
+                Constant=-25}"
+        RelativeLayout.YConstraint=
+            "{ConstraintExpression 
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.5,
+                Constant=-25}"/>
+    <BoxView 
+        x:Name="boxView2"
+        WidthRequest="50" 
+        HeightRequest="50" 
+        Color="Fuchsia" 
+        RelativeLayout.XConstraint=
+            "{ConstraintExpression 
+                ElementName=boxView,
+                Type=RelativeToView,
+                Constant=-100,
+                Property=X}" 
+        RelativeLayout.YConstraint=
+            "{ConstraintExpression 
+                Type=RelativeToView,
+                ElementName=boxView,
+                Property=Y,
+                Constant=0}" />
+    <BoxView 
+        x:Name="boxView3"
+        WidthRequest="50" 
+        HeightRequest="50" 
+        Color="Blue" 
+        RelativeLayout.XConstraint=
+            "{ConstraintExpression 
+                ElementName=boxView,
+                Type=RelativeToView,
+                Constant=100,
+                Property=X}" 
+        RelativeLayout.YConstraint=
+            "{ConstraintExpression 
+                Type=RelativeToView,
+                ElementName=boxView,
+                Property=Y,
+                Constant=0}" />
+</RelativeLayout>
+```
