@@ -67,7 +67,9 @@ pages:
   - Customizing ListView: customizing-listview.md
   - Styles and Resources: ui-styles.md
   - Networking: networking.md
-  - Persistance and SQLite: persistence.md
+  - Persistance and SQLite: 
+      - Preferences: persistence/preferences.md
+      - SQLite.NET: persistence/sqlite.md
   - Data Binding: data-binding.md
   - Model View-View Model(MVVM): mvvm.md
   - Dependency Injection: dependency-injection.md
