@@ -1,6 +1,6 @@
+description: Xamarin Forms is a UI framework that is used to develop native cross platform mobile apps for Android, iOS and Windows UWP using C# programming language.
+
 # Xamarin Forms Essentials
-
-
 
 ![Xamarin Forms](images/xamarin-forms.png)
 

@@ -1,3 +1,5 @@
+description: A Switch allows toggling its value to true and false.
+
 # Switch
 
 A Switch allows toggling its value to true and false.

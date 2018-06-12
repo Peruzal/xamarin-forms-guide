@@ -1,3 +1,5 @@
+description: The StackLayout is one of most commonly used layouts. It stacks its children in either horizontal or vertical orientation.
+
 # Stack Layout
 
 The StackLayout is one of most commonly used layouts. It stacks its children in either horizontal or vertical orientation. The default orientation if Vertical. Position and size of views is based on the `HeightRequest`, `WidthRequest`, `HorizontalOptions` and `VerticalOptions`.

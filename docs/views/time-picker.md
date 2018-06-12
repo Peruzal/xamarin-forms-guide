@@ -1,3 +1,5 @@
+description: The TimePickers allows picking time.
+
 # TimePicker
 
 The TimePickers allows picking time.

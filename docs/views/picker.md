@@ -1,3 +1,5 @@
+description: The picker is used to select from a list of choices. The Picker visual appearance is similar to an Entry but instead of using a keyboard, you choose from a predefined list of elements.
+
 # Picker
 
 The picker is used to select from a list of choices. The Picker visual appearance is similar to an Entry but instead of using a keyboard, you choose from a predefined list of elements.

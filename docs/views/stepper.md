@@ -1,3 +1,5 @@
+description: A Stepper allows inputting a discrete value that is constrained to a range.
+
 # Stepper
 
 A Stepper allows inputting a discrete value that is constrained to a range.

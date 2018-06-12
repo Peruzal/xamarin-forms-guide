@@ -1,3 +1,5 @@
+description: he Button view reacts to click events.
+
 # Button
 
 ![Button View](../images/views/button.png)

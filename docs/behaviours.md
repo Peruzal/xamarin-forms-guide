@@ -1,3 +1,5 @@
+description: Behaviors lets you add functionality to controls without subclassing them. Instead the functionality is defined separately in a class that inherits from Behavior.
+
 # Behaviors
 
 Behaviors lets you add functionality to controls without subclassing them. Instead the functionality is defined separately in a class that inherits from Behavior.

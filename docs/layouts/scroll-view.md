@@ -1,3 +1,5 @@
+description: The ScrollView is used to wrap content that needs to scroll. The ScrollView control can only have one child.
+
 # ScrollView
 
 The ScrollView is used to wrap content that needs to scroll. The ScrollView control can only have one child.

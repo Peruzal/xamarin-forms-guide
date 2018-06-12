@@ -1,6 +1,8 @@
+description: The ProgressBar control is used to display progress of an activity.
+
 # Progress Bar
 
-The ProgressBar control is used to dispay progress of an activity.
+The ProgressBar control is used to display progress of an activity.
 
 # In XAML
 

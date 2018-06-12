@@ -1,3 +1,5 @@
+description: Using the Xamarin.Essentials library we can store preferences for each platform using a common api.
+
 # Preferences
 
 Using the Xamarin.Essentials library we can store preferences for each platform using a common api.

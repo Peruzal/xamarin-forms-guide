@@ -1,3 +1,5 @@
+description: The control is used toHTML content.
+
 # Web View
 
 The control is used toHTML content.

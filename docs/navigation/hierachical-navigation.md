@@ -1,3 +1,5 @@
+description: The NavigationPage is used for hierarchical navigation. You can push and pop pages. It will automatically manage the stack of pages.
+
 # Hierarchical Navigation
 
 The NavigationPage is used for hierarchical navigation. You can push and pop pages. It will automatically manage the stack of pages.

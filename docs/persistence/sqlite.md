@@ -1,3 +1,5 @@
+description: The SQLite database is the most popular relational database on mobile devices.
+
 # SQLite.NET
 
 The SQLite database is the most popular relational database on mobile devices.

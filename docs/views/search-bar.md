@@ -1,3 +1,5 @@
+description: The view provides a search box.
+
 # SearchBar
 
 The view provides a search box.

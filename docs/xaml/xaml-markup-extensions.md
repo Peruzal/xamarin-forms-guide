@@ -1,3 +1,5 @@
+description: The XAML markup extension adds additional functionality thats not defined in the standard XAML spec.
+
 # XAML Markup Extension
 
 The XAML markup extension adds additional functionality thats not defined in the standard XAML spec.

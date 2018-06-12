@@ -1,3 +1,5 @@
+description: The Grid is used to display views in rows and columns. The Grid rows and columns supports spacing. The Grid is a powerful control. 
+
 # Grid Layout
 
 The Grid is used to display views in rows and columns. The Grid rows and columns supports spacing. The Grid is a powerful control. The control is not ideal for displaying tabular data, for that you should use the [**ListView**](/views/list-view) or the **TableView** control.

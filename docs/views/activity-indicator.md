@@ -1,3 +1,5 @@
+description: Gives the user an indication that something is happening without showing the progress. If you would like to show progress of an activity use the ProgressBar instead.
+
 # Activity Indicator
 
 Gives the user an indication that something is happening without showing the progress. If you would like to show progress of an activity use the ProgressBar instead.

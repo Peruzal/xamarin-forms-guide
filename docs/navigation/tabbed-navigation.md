@@ -1,3 +1,5 @@
+description: The TabbedPage is used for tabbed navigation. The layout of the a TabbedPage is dependent on the platform. On Android the tabs are displayed at the top and on iOS at the bottom.
+
 # Tabbed Navigation
 
 The TabbedPage is used for tabbed navigation. The layout of the a TabbedPage is dependent on the platform. On Android the tabs are displayed at the top and on iOS at the bottom.

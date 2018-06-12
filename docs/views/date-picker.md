@@ -1,3 +1,5 @@
+description: The view allows selecting a date. The control allows limiting the minimum and maximum date ranges that can be selected.
+
 # DatePicker
 
 The view allows selecting a date. The control allows limiting the minimum and maximum date ranges that can be selected.

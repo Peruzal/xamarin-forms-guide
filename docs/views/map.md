@@ -1,3 +1,5 @@
+description: Xamarin Forms will use the native map control on each platform. On Android it will use the Google Maps and on iOS the Apple Maps. 
+
 # Map
 
 Xamarin Forms will use the native map control on each platform. On Android it will use the Google Maps and on iOS the Apple Maps. The Maps needs to be configured.

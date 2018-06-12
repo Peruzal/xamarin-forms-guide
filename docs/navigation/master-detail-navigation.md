@@ -1,4 +1,4 @@
-# 
+description: The MasterDetailPage is used to create the master and detail relationship type of pages. The one page will act as the master and the other as the detail. The MasterDetailsPage renders independently on each platform.
 
 # Master Detail Navigation
 

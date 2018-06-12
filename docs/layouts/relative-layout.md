@@ -1,3 +1,4 @@
+description: The RelativeLayout is used to position and size views using constraints. You can position of size views against the parent view or other sibling views.
 # Relative Layout
 
 The `RelativeLayout` is used to position and size views using constraints. You can position of size views against the parent view or other sibling views.

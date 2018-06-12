@@ -1,3 +1,5 @@
+description: The Entry view is used for entering a single line of text. It is best used for collecting small amounts of text like usernames and passwords. It can be configured to displayed different types of keyboards.
+
 # Entry
 
 ![Entry View](../images/views/entry.png)

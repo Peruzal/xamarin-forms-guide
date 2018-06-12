@@ -1,3 +1,5 @@
+description: The ListView is one of the most popular controls. It's used to display a list of data. The list view automatically scrolls when the content does not fit the screen.
+
 # ListView
 
 The `ListView` is one of the most popular controls. It's used to display a list of data. The list view automatically scrolls when the content does not fit the screen.

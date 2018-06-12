@@ -1,3 +1,5 @@
+description: Data bindings allow properties of two objects to be linked so that a change in one causes a change in the other.
+
 # Databinding 
 
 ![Data Binding](images/data-binding/data-binding.png)

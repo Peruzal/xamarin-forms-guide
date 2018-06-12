@@ -1,6 +1,6 @@
+description: The CarouselPage is used to swipe pages form side to side to navigate between them. Its mainly used displaying pictures.
+
 # Using a Carousel Page
-
-
 
 The CarouselPage is used to swipe pages form side to side to navigate between them. Its mainly used displaying pictures.
 

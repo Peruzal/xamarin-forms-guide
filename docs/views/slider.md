@@ -1,3 +1,5 @@
+description: A view control that inputs a linear value. The control looks similar to a progress bar but allows scrubbing.
+
 # Slider
 
 A view control that inputs a linear value. The control looks similar to a progress bar but allows scrubbing.

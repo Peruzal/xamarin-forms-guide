@@ -1,3 +1,5 @@
+description: The Editor is used when you want to edit multiple lines of text. Use the Entry for a single line of text.
+
 # Editor
 
 ![Entry](../images/views/editor.png)

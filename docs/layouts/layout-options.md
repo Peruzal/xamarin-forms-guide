@@ -1,3 +1,5 @@
+description: Layout Options are used to position the views inside their parents container. Every view has a vertical and horizontal options for setting up its position, size and expansion within the parent.
+
 # Layout Options
 
 Layout Options are used to position the views inside their parents container. Every view has a vertical and horizontal options for setting up its position, size and expansion within the parent.

@@ -1,3 +1,5 @@
+description: The control is used to display images.
+
 # Image
 
 ![FFImageLoading](../images/views/ffimageloading.png)

@@ -1,3 +1,6 @@
+description: The AbsoluteLayout is used to position and size using absolute values or in proportions to the parent container.
+
+
 # Absolute Layout
 
 ![Absolute Layout](../images/layouts/absolute-layout.png)

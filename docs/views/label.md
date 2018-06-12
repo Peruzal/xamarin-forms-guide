@@ -1,3 +1,5 @@
+description: The Label view is used to display read only text. The Label can be created both in XAML and in code.
+
 # Label View
 
 ![Xamarin Forms](../images/views/label.png)

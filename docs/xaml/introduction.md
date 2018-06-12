@@ -1,3 +1,5 @@
+description: XAML stands for Extensible Markup Language. Its used in developing Windows UWP applications. XAML is also used to develop the user interface for Xamarin.Forms applications.
+
 # Introduction XAML
 
 ![XAML](../images/xaml.png)
