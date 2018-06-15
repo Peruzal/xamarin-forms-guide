@@ -2,8 +2,9 @@ site_name: Xamarin Forms Guide
 theme:
   name: 'material'
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: 'amber'
+    accent: 'deep orange'
+  logo: images/logo-lines.png
 markdown_extensions:
   - codehilite
   - admonition  
@@ -14,6 +15,8 @@ markdown_extensions:
 site_url: https://guides.peruzal.com/xamarin-forms-guide
 repo_url: https://github.com/Peruzal/xamarin-forms-guide
 repo_name: Github
+
+
 
 google_analytics:
   - 'UA-40772582-8'
