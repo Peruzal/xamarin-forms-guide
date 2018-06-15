@@ -1,3 +1,5 @@
+description: DependencyService allows apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.
+
 # Dependency Injection
 
 `DependencyService` allows apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.
