@@ -2,19 +2,21 @@ description: XAML stands for Extensible Markup Language. Its used in developing 
 
 # Introduction XAML
 
-![XAML](../images/xaml.png)
+![XAML](../images/intro/xamarin-forms-app.png)
 
-XAML stands for Extensible Markup Language. Its used in developing Windows UWP applications. XAML is also used to develop the user interface for Xamarin.Forms applications.
+XAML stands for **Extensible Markup Language**. XAML is the preferred way for creating the UI in Xamarin Forms apps. XAML is also used in creating Windows UWP applications.
 
-The version for Windows UWP is not the same as the one used for Xamarin.Forms applications but the there's effort to make them standard.
+The version for Windows UWP is not the same as the one used for Xamarin.Forms applications but there's effort to standardize the different XAML versions.
 
 ## Design Interface
 
-Unfortunately there's not drag and drop interface for XAML as with Android Studio or XCode. However the intellisense in Visual Studio is very good. There's a Xamarin.Forms Previewer so you can preview before running the app.
+Unlike Android Studio and XCode that comes with a visual design tool, there's no drag and drop tool in Visual Studio for creating the UI with XAML. 
+
+We will largely depend with intelli-sense for auto-completing the XAML. In some instances the intelli-sense will stop working and you might be forced to restart Visual Studio.
 
 ## File Structure
 
-XAML files are composed of two files. The UI and the code behind. If we were to create an example Login page we would have the following :
+XAML files are composed of two files. The UI and the code behind. If we were to create an example _Login_ page we would have the following :
 
 * `Login.xaml` - XAML UI
 * `Login.xaml.cs` - Code behind for the UI
@@ -24,7 +26,7 @@ XAML files are composed of two files. The UI and the code behind. If we were to 
 Instead of using XAML, we can also create the UI entirely in code.
 
 !!! note
-    Creating UIs in code is not recommended and does not promote code sharing. When creating most apps, designers need to beautify the app, and not many designers can code. Designers can easily work in XAML without have to touch the underlying code for the app.
+    Creating UIs in code is not recommended and does not promote code sharing. When creating most apps, designers need to beautify the app, and not many designers can code. Designers can easily work in XAML without having to touch the underlying code for the app.
 
 *Login.xaml*
 
@@ -58,9 +60,11 @@ namespace TextSample.XAML
 }
 ```
 
-## Page Content
+## Page
 
-XAML pages derive from the `ContentPage` class. The contents of a `ContentPage` are assigned in the `Content` property. The `Content` property can only take one child. In XAML, `Content` property is the default, so we do not need to specify it, we can just start populating the content as follows :
+XAML pages derive from the `Page` class. The most commong type of the page is the `ContentPage`. A page usually takes the whole screen or part of the screen. The default project template creates a simple `ContentPage`.
+
+The contents of a `ContentPage` are assigned in the `Content` property. The `Content` property can only take one child. In XAML, `Content` property is the default, so we do not need to specify it, we can just start populating the content as follows :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -77,10 +81,23 @@ XAML pages derive from the `ContentPage` class. The contents of a `ContentPage` 
     </StackLayout>
 </ContentPage>
 ```
-
-With the XAML previewer we can see the preview as we build the page.
+!!! note
+    With the XAML previewer we can see the preview as we build the page.
 
 ![XAML Preview](../images/xaml-preview.png)
+
+## Page Types
+
+Out of the box, Xamarin Forms have the following `Pages` available :
+
+1. ContentPage
+2. MasterDetailPage
+3. NavigationPage
+4. TabbedPage
+5. TemplatePage
+6. CarouselPage
+
+We will discuss these pages in more detail
 
 ## Referencing XAML Controls in Code
 

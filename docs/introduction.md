@@ -1,36 +1,49 @@
 description: Xamarin Forms is a UI framework that is used to develop native cross platform mobile apps for Android, iOS and Windows UWP using C# programming language.
 
-# Xamarin Forms Essentials
+# Developing Android and iOS Mobile Apps with Xamarin Forms
 
 ![Xamarin Forms](images/xamarin-forms.png)
 
 ## What is Xamarin Forms
 Xamarin Forms is a UI framework that is used to develop native cross platform mobile apps for Android, iOS and Windows UWP using C# programming language.
 
-## Why Choose Xamarin Forms
-- One language to rule them all, C#. You don't need to learn a myriad array of languages to develop an Android, iOS or Windows UWP app.
+Visual Studio is the primary IDE(Integrated Development Environment) used for developing Xamarin Forms applications.
+
+## Why choose Xamarin Forms
+- One language to rule them all, **C#**. You don't need to learn Java and Kotlin for Android or Objective-C and Swift for iOS.
 - Save cost. See below how much it would cost to develop a typical app for both Android and iOS.
 - Quick to market. With Xamarin Forms, you develop once and deploy to both platforms.
 
 ![Xamarin Cost Savings](images/xamarin-cost-savings.png)
 
+## When not to use Xamarin Forms
+
+- When you need pixel perfect apps, Xamarin Forms is not the tool to use.
+- Xamarin Forms is not good for building games
+- Apps that depend with a lot of native functionality for one platform are not good candidates for developing Xamarin Forms applications.
+
 ## History
-Xamarin is the company that originally built Xamarin Forms. The company was bought by Microsoft.
+Xamarin was found by Nat Friedman, Miguel de Icaza and Joseph Hill in May 2011 and was later bought by Microsoft in 2016.
 
-To develop apps using Xamarin, you had to pay a developer license for each of the platform and for each developer. This was really expensive and only corporates choose this route to build native cross platform mobile apps.
-
-You also had to pay when running on Windows, you need to buy the Visual Studio Xamarin plugin.
-
-The development environment that was used was called Xamarin Studio. Xamarin Studio is no longer available.
+Xamarin Studio was used on Mac and a separate plugin for Visual Studio was used to develop on Wndows. 
 
 When Microsoft purchased Xamarin they made Xamarin open source and removed payment options. This helped the adoption of Xamarin.
 
-Microsoft then integrated Xamarin into Visual Studio. You can now develop on both Windows and Mac.
+Microsoft then integrated Xamarin into Visual Studio. You can now develop on both Windows and Mac with Visual Studio for Windows and Visual Studio for Mac.
+
+## Why was Xamarin not Popular
+Although a powerful platform, Xamarin was not widely known compared to the other cross platform development tools, and here are some of the reasons:
+
+- Xamarin license for each platform, one for Android and another for iOS
+- Xamarin Visual Studio plugin license
+- Single developer license
+
+Before the acquisition by Microsoft, Xamarin was licensed per platform per developer. You would need two licenses to develop both Android and iOS and another license to use Xamarin for Visual Studio. If you used both a Mac and a PC you would need in total 4 licenses. This was really expensive and only corporates could afford to spend that much money on licensing the software.
 
 ## Platforms
 Xamarin Forms is available on both Windows and Mac OS. You can build Xamarin Forms applications using Visual Studio on Windows and Visual Studio for Mac on OS X.
 
-## Traditional Xamarin Development
+## What is Traditional Xamarin Development?
 ![Traditional Xamarin Forms](images/xamarin-platform-specific.png)
 The traditional approach also called the silo approach to Xamarin development is to develop the UI natively for each platform and share business logic.
 

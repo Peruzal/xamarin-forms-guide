@@ -11,7 +11,7 @@ The Grid uses the `RowDefinitions` property to define the number of rows in the 
 Row and column information is stored in Grid's **RowDefinitions** & **ColumnDefinitions** properties. RowDefinition has a single property, **Height**, and **ColumnDefinition** has a single property, **Width**. The options for height and width are as follows:
 
 * **Auto** – automatically sizes to fit content in the row or column. Specified as   in XAML.
-* **Proportional\(\*\)** – sizes columns and rows as a proportion of the remaining space. Specified as a valu and as \#\* in XAML, with \# being your desired value. Specifying one row/column with \* will cause it to fill the available space.
+* **Proportional\(\*\)** – sizes columns and rows as a proportion of the remaining space. Specified as a value and as \#\* in XAML, with \# being your desired value. Specifying one row/column with \* will cause it to fill the available space.
 * **Absolute** – sizes columns and rows with specific, fixed height and width values. Specified as a value and as \# in XAML, with \# being your desired value.
 
 The Grid uses attached properties. This means, views created inside the Grid will have Grid properties but those properties are not defined on those View.

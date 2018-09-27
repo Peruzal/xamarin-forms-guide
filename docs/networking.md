@@ -53,10 +53,22 @@ using (var client = new HttpClient())
 Instead of sending the content as form url encoded, we can post the body of the content as JSON as follows:
 
 ```csharp
+var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
+var result = await client.PostAsync(url, content).Result;
 ```
 
 ## Send Headers
 
+To send the headers, we add the headers as a key value pair in the `DefaultRequestHeaders` collection as follows :
 
+```csharp
+private Task<string> fetchMovies(){
+    var client = new HttpClient();
+    //Add the header as a key value pair
+    client.DefaultRequestHeaders.Add("X-Parse-Application-Id", "Value of header here");
+    return client.GetStringAsync("https://parse.peruzal.com/parse/classes/Movie/");
+}
+```
 
-
+!!! note
+    The header name is `X-Parse-Application-Id` and the value of the header is `Value of header here`.

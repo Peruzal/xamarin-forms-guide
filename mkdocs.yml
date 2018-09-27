@@ -35,13 +35,19 @@ extra:
     - type: 'twitter'
       link: 'https://twitter.com/peruzal'
         
-pages:
-  - Home: index.md
+nav:
   - Introduction to Xamarin Forms: introduction.md
   - XAML:
     - Introduction to XAML: xaml/introduction.md
     - Platform Specifics: xaml/on-platform.md
     - XAML Mark Extension: xaml/xaml-markup-extensions.md
+  - Pages:
+    - Content Page: pages/content-page.md
+    - Navigation Page: pages/navigation-page.md
+    - Tabbed Page: pages/navigation-page.md
+    - Master Detail Page: pages/master-detail-page.md
+    - Carousel Page: pages/carousel-page.md
+    - Template Page: pages/template-page.md
   - Xamarin Forms Views: 
       - Label: views/label.md
       - Entry: views/entry.md
@@ -56,6 +62,8 @@ pages:
       - Slider: views/slider.md
       - Activity Indicator: views/activity-indicator.md
       - ProgressBar: views/progress-bar.md
+      - BoxView: views/box-view.md
+      - Frame: views/frame.md
       - Search Bar: views/search-bar.md
       - List View: views/list-view.md
       - Map: views/map.md

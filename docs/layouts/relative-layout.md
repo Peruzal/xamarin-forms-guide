@@ -20,7 +20,7 @@ Let's use the `XConstraint` to center a BoxView inside the Relative layout.
 
 ![Relative Layout Center BoxView](../images/layouts/relative-layout-center-in-parent.png)
 
-```xaml
+```xml
 <RelativeLayout x:Name="container">
     <BoxView x:Name="boxView" 
             WidthRequest="50" 
