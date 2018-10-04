@@ -25,5 +25,28 @@ public class MainPageCS : TabbedPage
 }
 ```
 
+## Change Colors
 
+The tab bar can be customized for each platform
 
+### iOS
+
+The changes below should be madein the iOS project
+
+- Open the `AppDelegate.cs` file
+- Within the method `FinishedLaunching` add the following lines
+
+```cs
+public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+{
+    // The background color of the tab bar
+    UITabBar.Appearance.BarTintColor = UIColor.Orange;
+    // Change the tint of the selected image and text
+    UITabBar.Appearance.SelectedImageTintColor = UIColor.White;
+
+    global::Xamarin.Forms.Forms.Init();
+    LoadApplication(new App());
+
+    return base.FinishedLaunching(app, options);
+}
+```

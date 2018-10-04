@@ -13,7 +13,7 @@ Available Alignment LayoutOptions
 * End
 * Fill
 
-The default layout options for vertical and horizontal options is Fill.
+The default layout options for vertical and horizontal options is **Fill**.
 
 **Start**
 
@@ -42,15 +42,18 @@ Here is the layout options set for a StackLayout in XAML :
 </StackLayout>
 ```
 
-> A **StackLayout** only respects the **Start**, **Center**, **End**, and **Fill** LayoutOptions fields on child views that are in the opposite direction to the StackLayout orientation. Therefore, child views within a vertically oriented StackLayout can set their **HorizontalOptions** properties to one of the **Start**, **Center**, **End**, or **Fill** fields. Similarly, child views within a horizontally oriented StackLayout can set their **VerticalOptions** properties to one of the Start, Center, End, or Fill fields.
+!!! tip
+    A **StackLayout** only respects the **Start**, **Center**, **End**, and **Fill** LayoutOptions fields on child views that are in the opposite direction to the StackLayout orientation. Therefore, child views within a vertically oriented StackLayout can set their **HorizontalOptions** properties to one of the **Start**, **Center**, **End**, or **Fill** fields. Similarly, child views within a horizontally oriented StackLayout can set their **VerticalOptions** properties to one of the Start, Center, End, or Fill fields.
 
 ## Expansion and Layout Options
 
 Expansion controls whether the views will take up unused space with the StackLayout when the StackLayout is larger than its views.The space is divided equally by the views that requests expansion by setting the HorizontalOptions and VerticalOptions that uses the suffix _AndExpand_.
 
-> Note that the AndExpand option does not take effect when all the space is used in the StackLayout.
+!!! tip
+    Note that the AndExpand option does not take effect when all the space is used in the StackLayout.
+    A StackLayout can only expand views in the direction of its orientation.
 
-A StackLayout can only expand views in the direction of its orientation. A verticall oriented StackLayout can only expands child views that set the `VerticalOptions` property to one of the `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, `FillAndExpand` and the same for the horizontally oriented StackLayout.
+A vertically oriented StackLayout can only expands child views that set the `VerticalOptions` property to one of the `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, `FillAndExpand` and the same for the horizontally oriented StackLayout.
 
 These expansion properties only take effect within a StackLayout :
 

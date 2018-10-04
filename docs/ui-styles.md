@@ -27,12 +27,12 @@ Explicit styles need to be explicitly referenced for a control and also contains
  </Style>
 ```
 
-We are  defining a style with a key `TransparentButtonStyle` for the Button class.  
+We are defining a style with a key `TransparentButtonStyle` for the Button class.  
 
 !!! note
     When defining styles, the `TargetType` is a required property. You can not define a style without a `TargetType`.
 
-We can then use the various `Setter`'s to define the properties we need for that styles. We have create a button style with a transparent background with a thin gray border :
+We can then use the various `Setter`'s to define the properties we need for a style. The following defines a button style with a transparent background with a thin gray border :
 
 ```xaml
 <ContentPage.Resources>
@@ -49,7 +49,7 @@ We can then use the various `Setter`'s to define the properties we need for that
 ```
 
 !!! note
-    Note that in this instance the style is defined with the `ContentPage`. When the same style is defined in the `App` XAML file then it becomes a global style. This style is only available within the `ContentPage` is defined on.
+    Note that in this instance the style is defined within the `ContentPage`. When the same style is defined in the `App` XAML file then it becomes a global style. This style is only available within the `ContentPage` its defined on.
 
 ### Applying the Explicit Style
 
@@ -64,7 +64,7 @@ To apply the style to the control we can reference it as a `StaticResource` usin
 
 ## Implicit Styles
 
-Implicit styles do not specify a key when they are defined. The style will be automatically be applied to all controls of the specified `TargetType`.
+Implicit styles do not specify a key when they are defined. The style will be applied automatically to all controls of the specified `TargetType`.
 
 We can change the above style and just remove the `Targettype` to make it an implicit style  as follows :
 
@@ -88,7 +88,7 @@ We can change the above style and just remove the `Targettype` to make it an imp
 
 The global styles are defined in the `App` class's XAML file. The styles will be available to the entire application. The global styles can be either implicit or explicit.
 
-We have changed the location of the implicit style previous defined and placed the style in the application's XAML file :
+We have changed the location of the implicit style previously defined and placed the style in the application's XAML file :
 
 ```xml
     <Application.Resources>

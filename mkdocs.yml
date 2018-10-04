@@ -44,7 +44,7 @@ nav:
   - Pages:
     - Content Page: pages/content-page.md
     - Navigation Page: pages/navigation-page.md
-    - Tabbed Page: pages/navigation-page.md
+    - Tabbed Page: pages/tabbed-page.md
     - Master Detail Page: pages/master-detail-page.md
     - Carousel Page: pages/carousel-page.md
     - Template Page: pages/template-page.md

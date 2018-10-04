@@ -39,6 +39,24 @@ var image = new Image
 };
 ```
 
+## Scaling and Resizing the Image
+
+We can use the `WidthRequest` and `HeightRequest` to set width and height of the image as follows :
+
+```xml
+ <Image Source="logo" WidthRequest="70" HeightRequest="70"  />
+```
+
+In addition to setting the width and height of the image, you can also set the `Aspect` property as follows :
+
+```xml
+<Image Source="logo" WidthRequest="70" HeightRequest="70" Aspect="AspectFit" />
+```
+
+The available options are :
+- AspectFit - Fit the set width and height and maintain the aspect
+- AspectFill - Fill the set width and height and maintain the apsect
+- Fill - Fill the set width and height
 
 ## Custom library for image loading and caching
 

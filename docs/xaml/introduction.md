@@ -21,6 +21,15 @@ XAML files are composed of two files. The UI and the code behind. If we were to 
 * `Login.xaml` - XAML UI
 * `Login.xaml.cs` - Code behind for the UI
 
+
+## XAML UI Structure
+
+A XAML view is composed of a `Page`. Within the `Page` different `Layouts` can be used and within the `Layout` several views are used to created the UI.
+
+Here is a simplified structure of a single XAML view.
+
+![XAML UI Structure](../images/intro/xaml-ui-structure.png)
+
 ## Code vs XAML
 
 Instead of using XAML, we can also create the UI entirely in code.
@@ -130,16 +139,24 @@ void UsernameChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
 
 ## Complex Properties
 
-Most of the properties set on the views are complex objects, e.g the `Margin` is of type `Thickness`. There are two ways to set the value. 
+Most of the properties set on the views are complex objects, e.g the `Margin` is of type `Thickness`. There are two ways to set the value : 
 
-**Value Converter**
+1. Using **ValueConverter**
+2. Using **Attached Properties**
+
+### Value Converter
 Using a value converter, we can easily set a complex property. E.g, to set the padding to 20 for the content page, we can do the following :
 
 ```xml
-
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Intro" x:Class="Intro.MainPage"
+             Padding="20">
 ```
 
-## Attached Properties
+We are setting `Padding="20"` as a sting value, a `ValueConveter` is used to convert the `string` value to its corresponding `Thickness` type.
+
+### Attached Properties
 
 We can also have properties not defined on that control be made available by attaching them. Properties can be attached when the control is embedded inside the outer control that have the property available. E.g, the `Grid` layout, defines `Grid.Row` and `Grid.Column`. We can have these controls available to child controls of the grid e.g
 
