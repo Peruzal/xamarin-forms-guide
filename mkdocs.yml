@@ -41,13 +41,13 @@ nav:
     - Introduction to XAML: xaml/introduction.md
     - Platform Specifics: xaml/on-platform.md
     - XAML Mark Extension: xaml/xaml-markup-extensions.md
-  - Pages:
-    - Content Page: pages/content-page.md
-    - Navigation Page: pages/navigation-page.md
-    - Tabbed Page: pages/tabbed-page.md
-    - Master Detail Page: pages/master-detail-page.md
-    - Carousel Page: pages/carousel-page.md
-    - Template Page: pages/template-page.md
+  # - Pages:
+  #   - Content Page: pages/content-page.md
+  #   - Navigation Page: pages/navigation-page.md
+  #   - Tabbed Page: pages/tabbed-page.md
+  #   - Master Detail Page: pages/master-detail-page.md
+  #   - Carousel Page: pages/carousel-page.md
+  #   - Template Page: pages/template-page.md
   - Xamarin Forms Views: 
       - Label: views/label.md
       - Entry: views/entry.md
@@ -65,7 +65,9 @@ nav:
       - BoxView: views/box-view.md
       - Frame: views/frame.md
       - Search Bar: views/search-bar.md
+      - Toolbar: views/toolbar.md
       - List View: views/list-view.md
+      - Table View: views/tableview.md
       - Map: views/map.md
       - Carousel View: views/carousel-view.md
       - Web View: views/web-view.md
@@ -75,7 +77,7 @@ nav:
       - Grid Layout: layouts/grid-layout.md
       - Absolute Layout: layouts/absolute-layout.md
       - Relative Layout: layouts/relative-layout.md
-      - Flex Layout: layouts/flex-layout.md
+      # - Flex Layout: layouts/flex-layout.md
       - Scroll View: layouts/scroll-view.md
   - Navigation: 
     - Hierachical Navigation: navigation/hierachical-navigation.md
@@ -97,3 +99,7 @@ nav:
   - Dependency Injection: dependency-injection.md
   - Extending Controls with Behaviours: behaviours.md
   - Xamarin.Essentials Cross Platform API: xamarin-essentials.md
+  # - Animation: animation.md
+  - Platform Specifics: platform-specifics.md
+  # - Design Resources: design-resources.md
+  # - Tips: tips.md

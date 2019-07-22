@@ -20,7 +20,7 @@ We can use the Navigation property on a ContentPage to push pages as follows :
 await Navigation.PushAsync(new MoviesPage());
 ```
 
-The will add the MoviesPage to the stack and navigate to it.
+This will add the MoviesPage to the stack and navigate to it.
 
 ## Popping a Page
 

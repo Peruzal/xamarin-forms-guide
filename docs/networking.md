@@ -12,7 +12,7 @@ To make network calls on Android you will need to have the `INTERNET` permission
 
 **iOS**
 
-On iOS you will just need to make sure that the API is using `https`. If you the url is `http`, you will need to add some configuration to the `Info.plist` file.
+On iOS you will just need to make sure that the API is using `https`. If the url is `http`, you will need to add some configuration to the `Info.plist` file.
 
 ## Performing a *GET* Request
 
@@ -55,6 +55,20 @@ Instead of sending the content as form url encoded, we can post the body of the 
 ```csharp
 var content = new StringContent(jsonObject.ToString(), Encoding.UTF8, "application/json");
 var result = await client.PostAsync(url, content).Result;
+```
+
+## Posting form data
+
+We can post form data using the `FormUrlEncodedContent` as follows:
+
+```csharp
+var content = new FormUrlEncodedContent(new List<KeyValuePair<string, string>>()
+{
+    new KeyValuePair<string, string>("username", entryUsername.Text),
+    new KeyValuePair<string,string>("password", entryPassword.Text)
+}); 
+
+var result = await client.PostAsync(url, content);
 ```
 
 ## Send Headers

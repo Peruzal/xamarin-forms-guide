@@ -7,7 +7,7 @@ Behaviors lets you add functionality to controls without subclassing them. Inste
 ### Advantages of Using Behaviors
 
 * Behaviors let you de-clutter your code behind files
-* Abstract away common that can be used across projects
+* Abstract away common code that can be used across projects
 * They let you add functionality that the control might not have, e.g adding command to controls that do not support.
 * Add custom validation to a control, e.g validating an email address in an Entry control
 * Add a Command to a ListView ItemSelected Event

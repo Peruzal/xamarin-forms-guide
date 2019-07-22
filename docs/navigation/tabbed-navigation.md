@@ -25,6 +25,14 @@ public class MainPageCS : TabbedPage
 }
 ```
 
+## Bottom Navigation tabs on Android
+
+We can show the tabs at the bottom on Android by adding the following code in the class that derives from the tabbed page:
+
+```csharp
+On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+```
+
 ## Change Colors
 
 The tab bar can be customized for each platform
@@ -50,3 +58,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     return base.FinishedLaunching(app, options);
 }
 ```
+
+### Android
+
+On Android you can change the colors in the Android project under the `Resources` -> values - > 

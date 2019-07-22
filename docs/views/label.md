@@ -120,6 +120,12 @@ Xamarin Forms comes with built-in styles for text. We can apply these using the 
 <Label Text="ListItemDetailText Style" Style="{DynamicResource ListItemDetailTextStyle}" />
 ```
 
+The styles are store in the `Device.Styles` class. You can retrieve the string key names of the styles:
+
+```csharp
+Debug.WriteLine(Device.Styles.TitleStyleKey);
+```
+
 ## LineBreak Mode  
 
 Labels can be set to handle text that can't fit on one line in one of several ways, exposed by the LineBreakMode property. LineBreakMode is an enumeration of the following options:
