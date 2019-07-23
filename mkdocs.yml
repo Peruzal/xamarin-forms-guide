@@ -18,12 +18,6 @@ site_url: https://guides.peruzal.com/xamarin-forms-guide
 repo_url: https://github.com/Peruzal/xamarin-forms-guide
 repo_name: Github
 
-
-
-google_analytics:
-  - 'UA-40772582-8'
-  - 'auto'
-
 extra:
   disqus: 'xamarin-guides'  
 
