@@ -49,6 +49,13 @@ We can remove and insert pages in the navigation stack using InsertPageBefore an
 Navigation.InsertPageBefore(new HomePage(), this);
 await Navigation.PopAsync();
 ```
+Another way to remove the login page from the navigation stack would be to set a new root page as follows :
+
+```csharp
+//App.IsLogged = true;
+Application.Current.MainPage = new HomePage();
+```
+NB: This works well when there's only the login page, otherwise you will need to pop the navigation stack first.
 
 ## Passing Data
 
