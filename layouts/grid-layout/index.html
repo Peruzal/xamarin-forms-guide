@@ -1,0 +1,1363 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="The Grid is used to display views in rows and columns. The Grid rows and columns supports spacing. The Grid is a powerful control.">
+      
+      
+        <link rel="canonical" href="https://guides.peruzal.com/xamarin-forms-guide/layouts/grid-layout/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Grid Layout - Xamarin Forms Guide - Peruzal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ffa000">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-40772582-8", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#grid-layout" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://guides.peruzal.com/xamarin-forms-guide" title="Xamarin Forms Guide - Peruzal" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo-lines.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Xamarin Forms Guide - Peruzal
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Grid Layout
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Peruzal/xamarin-forms-guide/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://guides.peruzal.com/xamarin-forms-guide" title="Xamarin Forms Guide - Peruzal" class="md-nav__button md-logo">
+      
+        <img src="../../images/logo-lines.png" width="48" height="48">
+      
+    </a>
+    Xamarin Forms Guide - Peruzal
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Peruzal/xamarin-forms-guide/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/" title="Introduction to Xamarin Forms" class="md-nav__link">
+      Introduction to Xamarin Forms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      XAML
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        XAML
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../xaml/introduction/" title="Introduction to XAML" class="md-nav__link">
+      Introduction to XAML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../xaml/on-platform/" title="Platform Specifics" class="md-nav__link">
+      Platform Specifics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../xaml/xaml-markup-extensions/" title="XAML Mark Extension" class="md-nav__link">
+      XAML Mark Extension
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Xamarin Forms Views
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Xamarin Forms Views
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/label/" title="Label" class="md-nav__link">
+      Label
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/entry/" title="Entry" class="md-nav__link">
+      Entry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/buttons/" title="Button" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/editor/" title="Editor" class="md-nav__link">
+      Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/image/" title="Image" class="md-nav__link">
+      Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/switch/" title="Switch" class="md-nav__link">
+      Switch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/stepper/" title="Stepper" class="md-nav__link">
+      Stepper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/picker/" title="Picker" class="md-nav__link">
+      Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/date-picker/" title="Date Picker" class="md-nav__link">
+      Date Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/time-picker/" title="Time Picker" class="md-nav__link">
+      Time Picker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/slider/" title="Slider" class="md-nav__link">
+      Slider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/activity-indicator/" title="Activity Indicator" class="md-nav__link">
+      Activity Indicator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/progress-bar/" title="ProgressBar" class="md-nav__link">
+      ProgressBar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/box-view/" title="BoxView" class="md-nav__link">
+      BoxView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/frame/" title="Frame" class="md-nav__link">
+      Frame
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/search-bar/" title="Search Bar" class="md-nav__link">
+      Search Bar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/toolbar/" title="Toolbar" class="md-nav__link">
+      Toolbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/list-view/" title="List View" class="md-nav__link">
+      List View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/tableview/" title="Table View" class="md-nav__link">
+      Table View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/map/" title="Map" class="md-nav__link">
+      Map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/carousel-view/" title="Carousel View" class="md-nav__link">
+      Carousel View
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/web-view/" title="Web View" class="md-nav__link">
+      Web View
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Layouts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Layouts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../layout-options/" title="Layout Options" class="md-nav__link">
+      Layout Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stack-layout/" title="Stack Layout" class="md-nav__link">
+      Stack Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Grid Layout
+      </label>
+    
+    <a href="./" title="Grid Layout" class="md-nav__link md-nav__link--active">
+      Grid Layout
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rows-and-columns" title="Rows and Columns" class="md-nav__link">
+    Rows and Columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spacing" title="Spacing" class="md-nav__link">
+    Spacing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spans" title="Spans" class="md-nav__link">
+    Spans
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-grid" title="A Simple Grid" class="md-nav__link">
+    A Simple Grid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../absolute-layout/" title="Absolute Layout" class="md-nav__link">
+      Absolute Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../relative-layout/" title="Relative Layout" class="md-nav__link">
+      Relative Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scroll-view/" title="Scroll View" class="md-nav__link">
+      Scroll View
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Navigation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Navigation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigation/hierachical-navigation/" title="Hierachical Navigation" class="md-nav__link">
+      Hierachical Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigation/tabbed-navigation/" title="Tabbed Navigation" class="md-nav__link">
+      Tabbed Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigation/master-detail-navigation/" title="Master Detail Navigation" class="md-nav__link">
+      Master Detail Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigation/carousel/" title="Swipe Navigation" class="md-nav__link">
+      Swipe Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      Displaying Popups
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        Displaying Popups
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigation/pop-ups/pop-ups/" title="Normal Popups" class="md-nav__link">
+      Normal Popups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../navigation/pop-ups/modal-pop-ups/" title="Modal Popups" class="md-nav__link">
+      Modal Popups
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../customizing-listview/" title="Customizing ListView" class="md-nav__link">
+      Customizing ListView
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-styles/" title="Styles and Resources" class="md-nav__link">
+      Styles and Resources
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../networking/" title="Networking" class="md-nav__link">
+      Networking
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Persistance and SQLite
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Persistance and SQLite
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../persistence/preferences/" title="Preferences" class="md-nav__link">
+      Preferences
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../persistence/sqlite/" title="SQLite.NET" class="md-nav__link">
+      SQLite.NET
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../data-binding/" title="Data Binding" class="md-nav__link">
+      Data Binding
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../mvvm/" title="Model View-View Model(MVVM)" class="md-nav__link">
+      Model View-View Model(MVVM)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../dependency-injection/" title="Dependency Injection" class="md-nav__link">
+      Dependency Injection
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../behaviours/" title="Extending Controls with Behaviours" class="md-nav__link">
+      Extending Controls with Behaviours
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../xamarin-essentials/" title="Xamarin.Essentials Cross Platform API" class="md-nav__link">
+      Xamarin.Essentials Cross Platform API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../platform-specifics/" title="Platform Specifics" class="md-nav__link">
+      Platform Specifics
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rows-and-columns" title="Rows and Columns" class="md-nav__link">
+    Rows and Columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spacing" title="Spacing" class="md-nav__link">
+    Spacing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spans" title="Spans" class="md-nav__link">
+    Spans
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-grid" title="A Simple Grid" class="md-nav__link">
+    A Simple Grid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Peruzal/xamarin-forms-guide/edit/master/docs/layouts/grid-layout.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="grid-layout">Grid Layout<a class="headerlink" href="#grid-layout" title="Permanent link">&para;</a></h1>
+<p>The Grid is used to display views in rows and columns. The Grid rows and columns supports spacing. The Grid is a powerful control. The control is not ideal for displaying tabular data, for that you should use the <a href="/views/list-view"><strong>ListView</strong></a> or the <strong>TableView</strong> control.</p>
+<p>The Grid uses the <code>RowDefinitions</code> property to define the number of rows in the Grid. It uses the <code>ColumnDefinitions</code> to define the number of columns in the Grid.</p>
+<h2 id="rows-and-columns">Rows and Columns<a class="headerlink" href="#rows-and-columns" title="Permanent link">&para;</a></h2>
+<p>Row and column information is stored in Grid's <strong>RowDefinitions</strong> &amp; <strong>ColumnDefinitions</strong> properties. RowDefinition has a single property, <strong>Height</strong>, and <strong>ColumnDefinition</strong> has a single property, <strong>Width</strong>. The options for height and width are as follows:</p>
+<ul>
+<li><strong>Auto</strong> – automatically sizes to fit content in the row or column. Specified as   in XAML.</li>
+<li><strong>Proportional(*)</strong> – sizes columns and rows as a proportion of the remaining space. Specified as a value and as #* in XAML, with # being your desired value. Specifying one row/column with * will cause it to fill the available space.</li>
+<li><strong>Absolute</strong> – sizes columns and rows with specific, fixed height and width values. Specified as a value and as # in XAML, with # being your desired value.</li>
+</ul>
+<p>The Grid uses attached properties. This means, views created inside the Grid will have Grid properties but those properties are not defined on those View.</p>
+<h2 id="spacing">Spacing<a class="headerlink" href="#spacing" title="Permanent link">&para;</a></h2>
+<p>Grid has properties to control spacing between rows and columns. The following properties are available for customizing the Grid:</p>
+<ul>
+<li><strong>ColumnSpacing</strong> – the amount of space between columns.</li>
+<li><strong>RowSpacing</strong> – the amount of space between rows.</li>
+</ul>
+<p>The following XAML specifies a Grid with two columns, one row, and 5 px of spacing between columns:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;Grid</span> <span class="na">ColumnSpacing=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Grid.ColumnDefinitions&gt;</span>
+    <span class="nt">&lt;ColumnDefinitions</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;ColumnDefinitions</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/Grid.ColumnDefinitions&gt;</span>
+<span class="nt">&lt;/Grid&gt;</span>
+</pre></div>
+
+
+<h2 id="spans">Spans<a class="headerlink" href="#spans" title="Permanent link">&para;</a></h2>
+<p>We can use the ColumnSpan and RowSpan to enable views to span over multiple columns or rows.</p>
+<p>The following spans the Button over two columns.</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;0&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;0&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span> <span class="na">Grid.ColumnSpan=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h5 id="a-simple-grid">A Simple Grid<a class="headerlink" href="#a-simple-grid" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;Grid&gt;</span>
+  <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+    <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;2*&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;200&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+  <span class="nt">&lt;Grid.ColumnDefinitions&gt;</span>
+    <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;Auto&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/Grid.ColumnDefinitions&gt;</span>
+<span class="nt">&lt;/Grid&gt;</span>
+</pre></div>
+
+
+<p>We can use the Grid to create complex layouts. The XAML below creates a calculator UI using the Grid layout :</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ContentPage</span> <span class="na">xmlns=</span><span class="s">&quot;http://xamarin.com/schemas/2014/forms&quot;</span>
+<span class="na">xmlns:x=</span><span class="s">&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;</span>
+<span class="na">x:Class=</span><span class="s">&quot;Demo.CalculatorPage&quot;</span>
+<span class="na">Title =</span> <span class="s">&quot;Calculator - XAML&quot;</span>
+<span class="na">BackgroundColor=</span><span class="s">&quot;#404040&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ContentPage.Content&gt;</span>
+        <span class="nt">&lt;Grid</span> <span class="na">x:Name=</span><span class="s">&quot;controlGrid&quot;</span> <span class="na">RowSpacing=</span><span class="s">&quot;1&quot;</span> <span class="na">ColumnSpacing=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+                <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;150&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+            <span class="nt">&lt;Grid.ColumnDefinitions&gt;</span>
+                <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;ColumnDefinition</span> <span class="na">Width=</span><span class="s">&quot;*&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Grid.ColumnDefinitions&gt;</span>
+            <span class="nt">&lt;Label</span> <span class="na">Text=</span><span class="s">&quot;0&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;0&quot;</span> <span class="na">HorizontalTextAlignment=</span><span class="s">&quot;End&quot;</span> <span class="na">VerticalTextAlignment=</span><span class="s">&quot;End&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;White&quot;</span>
+        <span class="na">FontSize=</span><span class="s">&quot;60&quot;</span> <span class="na">Grid.ColumnSpan=</span><span class="s">&quot;4&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;C&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;1&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#ddd&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;+/-&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;1&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#ddd&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;%&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;1&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#ddd&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;div&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;1&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;3&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#E8AD00&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;White&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;7&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;2&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span> <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;8&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;2&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;9&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;2&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;X&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;2&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;3&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#E8AD00&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;White&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span>  <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;4&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;3&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;5&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;3&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;6&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;3&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;-&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;3&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;3&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#E8AD00&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;White&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span>  <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;1&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;4&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;2&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;4&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;3&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;4&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;+&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;4&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;3&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#E8AD00&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;White&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span>  <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;0&quot;</span> <span class="na">Grid.ColumnSpan=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">Grid.Row=</span><span class="s">&quot;5&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;0&quot;</span> <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;.&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;5&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#eee&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;Black&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;Button</span> <span class="na">Text =</span> <span class="s">&quot;=&quot;</span> <span class="na">Grid.Row=</span><span class="s">&quot;5&quot;</span> <span class="na">Grid.Column=</span><span class="s">&quot;3&quot;</span>
+        <span class="na">BackgroundColor=</span><span class="s">&quot;#E8AD00&quot;</span> <span class="na">TextColor=</span><span class="s">&quot;White&quot;</span> <span class="na">BorderRadius=</span><span class="s">&quot;0&quot;</span> <span class="na">FontSize=</span><span class="s">&quot;40&quot;</span>  <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/Grid&gt;</span>
+    <span class="nt">&lt;/ContentPage.Content&gt;</span>
+<span class="nt">&lt;/ContentPage&gt;</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../stack-layout/" title="Stack Layout" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Stack Layout
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../absolute-layout/" title="Absolute Layout" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Absolute Layout
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset" style="background-color: #ff9900; color: #fff">
+    <div class="md-grid" style="display: flex;">
+      <div style="flex: 1;">
+        <h2>Consulting</h2>
+        <ul style="list-style: none; margin-left: -15px;">
+          <li><a href="https://www.peruzal.com/mobile-app-development" target="_blank">Mobile App Development</a></li>
+          <li><a href="https://www.peruzal.com/mobile-app-device-security-and-penetration-testing" target="_blank">Mobile App Security and Penetration Testing</a></li>
+          <li><a href="https://www.peruzal.com/database-and-web-application-performance-tuning-and-consulting" target="_blank">Database Performance Tuning</a></li>
+        </ul>
+      </div>
+      <div style="flex: 1;">
+        <h2>Training</h2>
+        <ul style="list-style: none; margin-left: -15px;">
+          <li><a href="https://training.peruzal.com/courses/mobile/android-mobile-app-development-training-certification" target="_blank">Android Mobile App Development Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/ios-mobile-app-development-training-with-swift" target="_blank">iOS Mobile App Development Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/xamarin/xamarin-forms-mobile-app-development-training" target="_blank">Xamarin Forms Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/xamarin/android-mobile-app-development-training-with-xamarin" target="_blank">Xamarin Android Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/xamarin/ios-mobile-app-development-training-with-xamarin" target="_blank">Xamarin iOS Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/web/reactjs-front-end-web-application-development" target="_blank">ReactJS Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/web/reactjs-front-end-web-application-development" target="_blank">React Native Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/gaming/unity-certified-game-development-training-south-africa" target="_blank">Unity Game Development Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/database/mysql-database-administration-training-certification-south-africa" target="_blank">MySQL Database Adminstration Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/programming/java-programming-training-certification" target="_blank">Java Programming Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/programming/ruby-programming-training-certification" target="_blank">Ruby Programming Training</a></li>
+        </ul>
+      </div>
+      <div style="flex: 1">
+        <h2>Resources</h2>
+        <ul style="list-style: none; margin-left: -15px;">
+          <li><a href="http://guides.peruzal.com/xamarin-forms-guide" target="_blank">Xamarin Forms Guide</a></li>
+          <li><a href="http://guides.peruzal.com/v1/android-guides" target="_blank">Android Development Guides</a></li>
+          <li><a href="http://guides.peruzal.com/xamarin-ios" target="_blank">iOS Development Guides</a></li>
+          <li><a href="http://xamarin-android-guide.peruzal.com/" target="_blank">Xamarin Android Guides</a></li>
+          <li><a href="http://xamarin-ios-guide.peruzal.com/" target="_blank">Xamarin iOS Guide</a></li>
+          <li><a href="http://unity-certified-associate-guide.peruzal.com/" target="_blank">Unity Game Development Guide</a></li>
+          <li><a href="https://josephkandi.gitbooks.io/mysql-5-6-database-administration-certification-g/content/" target="_blank">MySQL Database Adminstration Guide</a></li>
+          <li><a href="https://josephkandi.gitbooks.io/learn-java-by-developing-an-android-app/content/" target="_blank">Java Programming Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="md-footer-meta__inner" style="background-color: rgba(0,0,0,.87)">
+      <div style="text-align: center; font-size: 0.7rem">
+          <div class="md-footer-copyright__highlight">
+            <a href="https://www.peruzal.com" target="_blank">Copyright &copy 2019 - Peruzal</a>
+          </div>
+      </div>
+      
+  <div style="text-align: center">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://www.peruzal.com" target="_blank" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/peruzal" target="_blank" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/peruzal" target="_blank" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://za.linkedin.com/company/peruzal" target="_blank" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/drift.js"></script>
+      
+        <script src="../../js/mixpanel.js"></script>
+      
+    
+  </body>
+</html>
