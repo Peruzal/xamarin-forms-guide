@@ -28,3 +28,22 @@ namespace iPhoneX
  }
 }
 ```
+
+```csharp
+C#
+On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
+1
+On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
+```
+
+```csharp
+public partial class ItemsPage : ContentPage
+{
+    public ItemsPage()
+    {
+        InitializeComponent();
+        On<Xamarin.Forms.PlatformConfiguration.iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
+    }
+    ...
+}
+```

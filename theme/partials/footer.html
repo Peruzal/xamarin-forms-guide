@@ -1,0 +1,88 @@
+{% import "partials/language.html" as lang with context %}
+<footer class="md-footer">
+  {% if page.previous_page or page.next_page %}
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        {% if page.previous_page %}
+          <a href="{{ page.previous_page.url | url }}" title="{{ page.previous_page.title }}" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  {{ lang.t("footer.previous") }}
+                </span>
+                {{ page.previous_page.title }}
+              </span>
+            </div>
+          </a>
+        {% endif %}
+        {% if page.next_page %}
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title }}" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  {{ lang.t("footer.next") }}
+                </span>
+                {{ page.next_page.title }}
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        {% endif %}
+      </nav>
+    </div>
+  {% endif %}
+  <div class="md-footer-meta md-typeset" style="background-color: #ff9900; color: #fff">
+    <div class="md-grid" style="display: flex;">
+      <div style="flex: 1;">
+        <h2>Consulting</h2>
+        <ul style="list-style: none; margin-left: -15px;">
+          <li><a href="https://www.peruzal.com/mobile-app-development" target="_blank">Mobile App Development</a></li>
+          <li><a href="https://www.peruzal.com/mobile-app-device-security-and-penetration-testing" target="_blank">Mobile App Security and Penetration Testing</a></li>
+          <li><a href="https://www.peruzal.com/database-and-web-application-performance-tuning-and-consulting" target="_blank">Database Performance Tuning</a></li>
+        </ul>
+      </div>
+      <div style="flex: 1;">
+        <h2>Training</h2>
+        <ul style="list-style: none; margin-left: -15px;">
+          <li><a href="https://training.peruzal.com/courses/mobile/android-mobile-app-development-training-certification" target="_blank">Android Mobile App Development Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/ios-mobile-app-development-training-with-swift" target="_blank">iOS Mobile App Development Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/xamarin/xamarin-forms-mobile-app-development-training" target="_blank">Xamarin Forms Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/xamarin/android-mobile-app-development-training-with-xamarin" target="_blank">Xamarin Android Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/mobile/xamarin/ios-mobile-app-development-training-with-xamarin" target="_blank">Xamarin iOS Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/web/reactjs-front-end-web-application-development" target="_blank">ReactJS Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/web/reactjs-front-end-web-application-development" target="_blank">React Native Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/gaming/unity-certified-game-development-training-south-africa" target="_blank">Unity Game Development Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/database/mysql-database-administration-training-certification-south-africa" target="_blank">MySQL Database Adminstration Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/programming/java-programming-training-certification" target="_blank">Java Programming Training</a></li>
+          <li><a href="https://training.peruzal.com/courses/programming/ruby-programming-training-certification" target="_blank">Ruby Programming Training</a></li>
+        </ul>
+      </div>
+      <div style="flex: 1">
+        <h2>Resources</h2>
+        <ul style="list-style: none; margin-left: -15px;">
+          <li><a href="http://guides.peruzal.com/xamarin-forms-guide" target="_blank">Xamarin Forms Guide</a></li>
+          <li><a href="http://guides.peruzal.com/v1/android-guides" target="_blank">Android Development Guides</a></li>
+          <li><a href="http://guides.peruzal.com/xamarin-ios" target="_blank">iOS Development Guides</a></li>
+          <li><a href="http://xamarin-android-guide.peruzal.com/" target="_blank">Xamarin Android Guides</a></li>
+          <li><a href="http://xamarin-ios-guide.peruzal.com/" target="_blank">Xamarin iOS Guide</a></li>
+          <li><a href="http://unity-certified-associate-guide.peruzal.com/" target="_blank">Unity Game Development Guide</a></li>
+          <li><a href="https://josephkandi.gitbooks.io/mysql-5-6-database-administration-certification-g/content/" target="_blank">MySQL Database Adminstration Guide</a></li>
+          <li><a href="https://josephkandi.gitbooks.io/learn-java-by-developing-an-android-app/content/" target="_blank">Java Programming Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="md-footer-meta__inner" style="background-color: rgba(0,0,0,.87)">
+      <div style="text-align: center; font-size: 0.7rem">
+          <div class="md-footer-copyright__highlight">
+            <a href="https://www.peruzal.com" target="_blank">Copyright &copy 2019 - Peruzal</a>
+          </div>
+      </div>
+      {% include "partials/social.html" %}
+    </div>
+  </div>
+</footer>

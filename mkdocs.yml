@@ -1,6 +1,8 @@
-site_name: Xamarin Forms Guide
+site_name: Xamarin Forms Guide - Peruzal
+site_description: An introductory guide to developing cross platform mobile apps for Android and iOS with Xamarin Forms
 theme:
   name: 'material'
+  custom_dir: 'theme'
   palette:
     primary: 'amber'
     accent: 'deep orange'
@@ -25,15 +27,23 @@ google_analytics:
 extra:
   disqus: 'xamarin-guides'  
 
-copyright: 'Copyright &copy; 2018 - Peruzal'
+copyright: 'Copyright &copy; 2019 - Peruzal'
 
 # Customization
+extra_javascript:
+  - 'js/drift.js'
+  - 'js/mixpanel.js'
+
 extra:
   social:
+    - type: 'globe'
+      link: 'https://www.peruzal.com'
     - type: 'github'
       link: 'https://github.com/peruzal'
     - type: 'twitter'
       link: 'https://twitter.com/peruzal'
+    - type: 'linkedin'
+      link: 'https://za.linkedin.com/company/peruzal'  
         
 nav:
   - Introduction to Xamarin Forms: introduction.md
